@@ -1,0 +1,5 @@
+# Untuk menjalankan UI (app/app.py) di komputer lokal.
+# Pelatihan dilakukan di Google Colab (dependensi dipasang oleh notebook).
+gradio==4.44.1
+requests
+huggingface_hub<0.26
