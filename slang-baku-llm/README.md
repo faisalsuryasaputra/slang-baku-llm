@@ -1,7 +1,7 @@
 # Penerjemah Slang -> Bahasa Indonesia Baku (Fine-Tuning Local LLM)
 
-Proyek tugas mata kuliah **[isi nama mata kuliah]** - Project 2: Fine-Tuning Local LLM.
-Penulis: **[Nama] - [NIM]** (dikerjakan individu dengan bantuan asisten AI).
+Proyek tugas mata kuliah **Generative AI** - Project 2: Fine-Tuning Local LLM.
+Penulis: **Faisal Surya Saputra - 103012330152** (dikerjakan individu dengan bantuan asisten AI).
 
 Sistem ini mengubah kalimat bahasa gaul/slang Indonesia menjadi bahasa Indonesia baku. Model dasar **Qwen 2.5 1.5B Instruct** di-fine-tuning dengan **QLoRA (Unsloth)** di Google Colab, dikonversi ke **GGUF (q4_k_m)**, lalu dijalankan **lokal lewat Ollama** dengan antarmuka **Gradio** yang menampilkan perbandingan model dasar vs model hasil fine-tuning.
 
@@ -152,9 +152,25 @@ Letakkan di folder `results/`: `kurva_loss_*.png`, `log_training_*.json`, `hasil
 
 **Contoh perbandingan** (isi dari `hasil_perbandingan_*.csv` atau dari UI):
 
-| Input | Model dasar | Model fine-tuned |
-|---|---|---|
-| `[isi]` | `[isi]` | `[isi]` |
+| No. | Input (Slang / Bahasa Gaul) | Model Dasar (`qwen2.5:1.5b`) | Model *Fine-Tuned* (`slang-baku-v2`) |
+| :--- | :--- | :--- | :--- |
+| 1 | `anjir, tugas gue numpuk banget minggu ini` | Gue harus belajar banyak materi di sekolah minggu ini. | Anjir, tugas saya sangat banyak bulan ini. |
+| 2 | `woi, jangan lupa bawain charger gue ya` | Woii, jangan lupa bawa charger-nya juga ya. | Hai, jangan lupa membawa peralatan pengisi daya saya ya. |
+| 3 | `doi udh balikan sm mantannya, bkn gue yg salah` | Saya sudah kembali ke tempat asalnya, tapi tidak ada saya yang salah. | Dia sudah kembali kepada mantan, bukan saya yang salah. |
+| 4 | `gila, nilai gue naik drastis semester ini` | Gua mendapat kenaikan nilai yang sangat drastis di semester ini. | Saya sangat tidak jelas, nilai saya meningkat drastis semestri ini. |
+| 5 | `sorry bgt gue telat, tadi ban motor gue bocor` | Sorry karena saya lupa, mobil saya pecah hari ini. | Saya sangat minta maaf karena terlambat, tadi motor saya bocor. |
+| 6 | `lo mau titip apa? gue mau ke indomaret` | Gue mau ke Indomaret, udh di sana ya. | Apakah kamu ingin membeli sesuatu? Saya ingin ke Indomaret. |
+| 7 | `gue males banget deh ngerjain laporan praktikum` | Saya tidak tertarik untuk membuat laporan praktikum. | Saya sangat malas menulis laporan praktikum. |
+| 8 | `btw besok kelasnya jadi online apa offline sih?` | besok, apakah kita akan belajar secara online atau offline? | Atau besok kelasnya jadi daring atau tatap muka? |
+| 9 | `ntar malem gue nginep di rumah temen` | ntar malam gue ngecek email di rumah temen. | Nanti malam, saya menginap di rumah teman. |
+| 10 | `dosennya galak banget, gue jadi gugup pas presentasi` | Dalam suasana rapat dan pentingnya sesi presentasi, saya merasa sangat agen dan malu-malu. | Dosennya sangat serius, saya menjadi gelisah saat presentasi. |
+| 11 | `capek banget gue abis nugas semaleman` | Saya sangat lelah setelah bekerja seharian. | Saya sangat lelah setelah mengerjakan tugas semalaman. |
+| 12 | `eh lo udah makan belum? gue laper nih` | eh lo udah makan belum? gue lapar deh. | Aduh, kamu sudah makan belum? Saya lapar sekali. |
+| 13 | `bokap gue marah gara-gara gue pulang kemaleman` | Gue marah karena gue pulang ke tempat asal. | Ayah saya marah karena saya pulang kemalaman. |
+| 14 | `tugas kelompok kita bubar jalan, nggak ada yang mau ngerjain` | Tugas kelas kita susah-susah gampang, tidak ada siapannya untuk membantu. | Tugas kelompok kita tidak berjalan, tidak ada yang mau mengerjakannya. |
+| 15 | `gue sih oke aja, terserah lo deh` | *[Model menolak/menjawab dengan peringatan etika]* | Saya saja baik-baik saja, terserah kamu. |
+
+---
 
 Screenshot demo: letakkan di `docs/screenshots/` lalu tautkan di sini.
 
@@ -177,14 +193,7 @@ Ringkasan; daftar lengkap ada di [`docs/troubleshooting.md`](docs/troubleshootin
 - Pengembangan lanjutan: data lebih banyak, model 3B, dan penilaian manual terstruktur.
 
 ## 12. Pembagian peran
-Proyek dikerjakan **individu** ([konfirmasi izin dosen]). Seluruh peran dipegang penulis:
-
-| Peran pada panduan tugas | Dikerjakan oleh |
-|---|---|
-| Data Engineer & Prep Specialist | [Nama] |
-| ML/Fine-Tuning Engineer | [Nama] |
-| Deployment & Integration Specialist | [Nama] |
-| Technical Writer & QA Engineer | [Nama] |
+Proyek dikerjakan **individu**. Seluruh peran dipegang penulis:
 
 Asisten AI (Claude) digunakan untuk membantu menyusun draf data, kode notebook, dan dokumentasi; seluruh keluaran dijalankan, diuji, dan dikurasi oleh penulis.
 
